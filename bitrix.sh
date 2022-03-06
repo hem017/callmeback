@@ -26,7 +26,7 @@ do
 
 	if [ "$1" == "test" ]; then
 		echo "$NAME - $PHONE"
-		curl -i -XPOST --data "values={\"LEAD_NAME\":[\"vvp\"],\"LEAD_PHONE\":[\"+7 (800) 533-48-26\"]}&consents={\"AGREEMENT_2\":\"Y\"}&recaptcha=undefined&timeZoneOffset=-120&id=60&trace={}&sec=gczezk" https://profav.bitrix24.ru/bitrix/services/main/ajax.php?action=crm.site.form.fill
+		curl -i -XPOST --data "values={\"LEAD_NAME\":[\"$NAME\"],\"LEAD_PHONE\":[\"$PHONE\"]}&consents={\"AGREEMENT_2\":\"Y\"}&recaptcha=undefined&timeZoneOffset=-120&id=60&trace={}&sec=gczezk" https://profav.bitrix24.ru/bitrix/services/main/ajax.php?action=crm.site.form.fill
 		exit 0;
 	fi
 
